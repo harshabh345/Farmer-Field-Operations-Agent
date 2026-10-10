@@ -1,0 +1,39 @@
+# ============================================================
+# Farmer Field Operations Agent — Complete Requirements
+# Install all with:   pip install -r requirements_new.txt
+# ============================================================
+
+# ── Core AI / LLM ────────────────────────────────────────────
+groq                      # Groq LLM API (llama-3.3-70b)
+langgraph>=0.2.0          # LangGraph agent orchestration
+langchain                 # LangChain base
+langchain-community       # LangChain community tools
+langchain-core>=0.3.73    # LangChain core (must match langgraph)
+
+# ── RAG / Retrieval ──────────────────────────────────────────
+chromadb                  # Vector store
+rank-bm25                 # BM25 lexical search
+sentence-transformers     # BAAI/bge embedding + CrossEncoder reranker
+faiss-cpu                 # (optional) FAISS vector index
+
+# ── ML Models ────────────────────────────────────────────────
+xgboost                   # XGBoost yield + crop recommendation models
+joblib                    # Model serialization (save/load .pkl)
+scikit-learn              # Needed by XGBoost + joblib
+
+# ── Data / Numerics ──────────────────────────────────────────
+numpy
+pandas
+requests                  # HTTP calls (Open-Meteo weather API)
+
+# ── Environment ──────────────────────────────────────────────
+python-dotenv             # Load GROQ_API_KEY from .env
+
+# ── PDF / Document loading ───────────────────────────────────
+pypdf
+pymupdf
+
+# ── Web Interface (Sprint 3) ─────────────────────────────────
+streamlit>=1.35.0         # Web UI framework
+folium>=0.16.0            # Interactive maps
+streamlit-folium>=0.21.0  # Streamlit + Folium bridge

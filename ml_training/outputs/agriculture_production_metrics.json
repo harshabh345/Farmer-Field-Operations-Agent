@@ -1,0 +1,8 @@
+{
+    "model": "Indian Agriculture Production and Yield Model",
+    "task": "regression",
+    "mae": 1936.1037535565993,
+    "rmse": 32341.04428677374,
+    "r2": 0.8788274783727854,
+    "test_samples": 115176
+}

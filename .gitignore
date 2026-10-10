@@ -1,0 +1,11 @@
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.pyc
+*.pyo
+outputs/
+
+# Large binary files (rebuild at runtime)
+Data/vector_store/chroma.sqlite3
+Data/vector_store/**/data_level0.bin
+

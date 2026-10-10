@@ -1,0 +1,37 @@
+# Farmer Field Operations Agent — Streamlit Cloud Requirements
+# ============================================================
+
+# ── Core AI / LLM ────────────────────────────────────────────
+groq
+langgraph>=0.2.0
+langchain
+langchain-community
+langchain-core>=0.3.73
+
+# ── RAG / Retrieval ──────────────────────────────────────────
+chromadb
+rank-bm25
+sentence-transformers
+faiss-cpu
+
+# ── ML Models ────────────────────────────────────────────────
+xgboost
+joblib
+scikit-learn
+
+# ── Data / Numerics ──────────────────────────────────────────
+numpy
+pandas
+requests
+
+# ── Environment ──────────────────────────────────────────────
+python-dotenv
+
+# ── PDF / Document loading ───────────────────────────────────
+pypdf
+pymupdf
+
+# ── Web Interface ────────────────────────────────────────────
+streamlit>=1.35.0
+folium>=0.16.0
+streamlit-folium>=0.21.0

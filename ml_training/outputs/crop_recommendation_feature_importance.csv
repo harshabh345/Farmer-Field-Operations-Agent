@@ -1,0 +1,11 @@
+feature,importance
+nitrogen,0.14660257
+rainfall,0.14605057
+humidity,0.13024831
+phosphorus,0.12420752
+potassium,0.11666117
+npk_total,0.10223634
+temperature_humidity_index,0.087130405
+npk_ratio,0.058399215
+temperature,0.056246728
+ph,0.03221718
