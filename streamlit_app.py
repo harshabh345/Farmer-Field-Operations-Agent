@@ -418,18 +418,23 @@ def render_map_section():
         center_lon = st.session_state.get("longitude") or 78.9629
         zoom = 12 if st.session_state.get("latitude") else 5
 
-        # Use OpenStreetMap (free, no API key needed)
+        # Use OpenStreetMap as primary base layer (100% free, community-hosted, no key required)
         m = folium.Map(
             location=[center_lat, center_lon],
             zoom_start=zoom,
-            tiles="OpenStreetMap",
+            tiles="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+            attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            name="OpenStreetMap",
             prefer_canvas=True,
         )
 
-        # Add a free dark tile — CartoDB dark_matter (free, no API key required)
+        # Add CartoDB Dark Matter free public direct tile
         folium.TileLayer(
-            tiles="CartoDB dark_matter",
+            tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+            attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             name="Dark Mode",
+            subdomains="abcd",
+            max_zoom=20,
             overlay=False,
             control=True,
         ).add_to(m)
