@@ -426,10 +426,9 @@ def render_map_section():
             prefer_canvas=True,
         )
 
-        # Add a free dark tile — Stadia Maps Alidade Smooth Dark (no API key for basic usage)
+        # Add a free dark tile — CartoDB dark_matter (free, no API key required)
         folium.TileLayer(
-            tiles="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
-            attr='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>',
+            tiles="CartoDB dark_matter",
             name="Dark Mode",
             overlay=False,
             control=True,
